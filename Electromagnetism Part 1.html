@@ -1,0 +1,3271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetism MCQs - MDCAT, NUMS, HEC, AKU & Competition Exams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- KaTeX for equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e3a8a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --background: #f0f9ff;
+            --card-bg: #ffffff;
+            --text-primary: #1e3a8a;
+            --text-secondary: #4b5563;
+            --border-radius: 5px;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.2s ease;
+            --compact-spacing: 3px;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #1e293b;
+            --dark: #f1f5f9;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            font-size: 8.1px;
+            line-height: 1.1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4.86px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #8b0000, #dc143c);
+            color: white;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            margin-bottom: 6.48px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 4.32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo h1 {
+            font-size: 0.972rem;
+            font-weight: 800;
+            margin-bottom: 1.62px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo p {
+            font-weight: 500;
+            font-size: 0.486rem;
+            opacity: 0.9;
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 0.648rem;
+            margin-bottom: 4.32px;
+            color: #ffd700;
+        }
+
+        .header-content p {
+            font-size: 0.486rem;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 15.12px;
+            height: 15.12px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 6.48px;
+            right: 6.48px;
+            z-index: 10;
+        }
+
+        .menu-toggle span {
+            width: 15.12px;
+            height: 1.62px;
+            background: white;
+            border-radius: 1.62px;
+            transition: var(--transition);
+            position: relative;
+            transform-origin: center;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(3.24px, 3.24px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4.32px, -4.32px);
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6.48px;
+            position: relative;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .nav-header h2 {
+            font-size: 0.729rem;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: none;
+            width: 25.92px;
+            height: 12.96px;
+            border-radius: 12.96px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.62px;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle span {
+            width: 9.72px;
+            height: 9.72px;
+            border-radius: 50%;
+            background: var(--primary);
+            position: absolute;
+            transition: var(--transition);
+            left: 1.62px;
+        }
+
+        .theme-toggle.dark span {
+            left: calc(100% - 11.34px);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2.43px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            padding: 4.05px 4.86px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.active {
+            background: #8b0000;
+            color: white;
+        }
+
+        /* Panel Styles */
+        .panel {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            margin-bottom: 6.48px;
+            transition: var(--transition);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+        }
+
+        .panel-actions {
+            display: flex;
+            gap: 2.43px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.43px;
+            padding: 2.43px 4.86px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #8b0000;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #dc143c;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0da271;
+            transform: translateY(-1px);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 4.86px;
+        }
+
+        .card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            margin-bottom: 4.05px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 0.567rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 4.86px;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #dc143c, #8b0000);
+            color: white;
+            padding: 9.72px 0;
+            margin-top: auto;
+            font-size: 0.486rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 6.48px;
+            margin-top: 6.48px;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6.48px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-6.48px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* MCQ Card Styles */
+        .mcq-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .mcq-info {
+            flex-grow: 1;
+            margin-bottom: 4.86px;
+        }
+
+        .mcq-id {
+            font-weight: 700;
+            font-size: 0.567rem;
+            color: #8b0000;
+            margin-bottom: 1.62px;
+        }
+
+        .mcq-subject {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+        }
+
+        .mcq-chapter {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+            font-weight: 600;
+        }
+
+        .mcq-details {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+            margin-bottom: 4.05px;
+        }
+
+        .start-btn {
+            background: #8b0000;
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 4.05px 6.48px;
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .start-btn:hover {
+            background: #dc143c;
+            transform: translateY(-1px);
+        }
+
+        /* Stats Panel */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(64.8px, 1fr));
+            gap: 4.05px;
+            margin-bottom: 4.86px;
+        }
+
+        .stat-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.05px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-value {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: #8b0000;
+        }
+
+        .stat-label {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Explanation Section Styles */
+        .explanation-section {
+            margin-bottom: 12.15px;
+            padding: 9.72px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 6.48px;
+            margin-bottom: 6.48px;
+            padding-bottom: 4.86px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: #8b0000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.81rem;
+        }
+
+        .explanation-title {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: #8b0000;
+        }
+
+        .explanation-content {
+            font-size: 0.567rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .explanation-content h4 {
+            font-size: 0.648rem;
+            margin: 6.48px 0 3.24px;
+            color: #8b0000;
+        }
+
+        .explanation-content p {
+            margin-bottom: 4.86px;
+        }
+
+        .explanation-content ul, .explanation-content ol {
+            margin-left: 16.2px;
+            margin-bottom: 6.48px;
+        }
+
+        .explanation-content li {
+            margin-bottom: 2.43px;
+        }
+
+        .mechanism-diagram {
+            text-align: center;
+            margin: 9.72px 0;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .key-concept {
+            background: rgba(139, 0, 0, 0.1);
+            border-left: 3.24px solid #8b0000;
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .key-concept-title {
+            font-weight: 700;
+            color: #8b0000;
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+
+        /* MCQ Detail Styles */
+        .mcq-detail-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 9.72px;
+            margin-bottom: 9.72px;
+            box-shadow: var(--shadow);
+        }
+
+        .mcq-question {
+            font-size: 0.648rem;
+            font-weight: 600;
+            margin-bottom: 6.48px;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .mcq-options {
+            margin-bottom: 9.72px;
+        }
+
+        .mcq-option {
+            padding: 4.05px 6.48px;
+            margin-bottom: 3.24px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.567rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2.43px solid transparent;
+        }
+
+        .mcq-option:hover {
+            background: rgba(139, 0, 0, 0.05);
+        }
+
+        .mcq-option.selected {
+            border-left-color: #8b0000;
+            background: rgba(139, 0, 0, 0.1);
+        }
+
+        .mcq-option.correct {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .mcq-option.incorrect {
+            border-left-color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .mcq-explanation {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.486rem;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .mcq-explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .explanation-title {
+            font-weight: 700;
+            color: #8b0000;
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+        }
+
+        .mcq-actions {
+            display: flex;
+            gap: 4.86px;
+            margin-top: 6.48px;
+        }
+
+        /* Progress Tracking */
+        .progress-section {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: #8b0000;
+        }
+
+        .progress-stats {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 6.48px;
+            background: #e5e7eb;
+            border-radius: 3.24px;
+            overflow: hidden;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 3.24px;
+            transition: width 0.5s ease;
+        }
+
+        /* Welcome Animation */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #8b0000, #dc143c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        .welcome-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            text-align: center;
+            color: white;
+            padding: 12.15px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9.72px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4.86px 16.2px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-content h2 {
+            font-size: 1.458rem;
+            margin-bottom: 9.72px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 2.5s infinite;
+        }
+
+        .welcome-content p {
+            font-size: 0.648rem;
+            margin-bottom: 12.15px;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .welcome-logo {
+            font-size: 2.025rem;
+            margin-bottom: 12.15px;
+            color: #ffd700;
+            text-shadow: 0 0 12.15px rgba(255, 215, 0, 0.5);
+            animation: pulseWelcome 1.5s infinite;
+        }
+
+        @keyframes pulseWelcome {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 12.15px;
+            right: 12.15px;
+            background: #25D366;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.053rem;
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Conceptual Q&A Styles */
+        .conceptual-qa {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 8.1px;
+            margin-bottom: 8.1px;
+            border-left: 3.24px solid var(--accent);
+        }
+
+        .qa-question {
+            font-weight: 700;
+            color: #8b0000;
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 4.05px;
+        }
+
+        .qa-question i {
+            color: var(--accent);
+            margin-top: 1.62px;
+        }
+
+        .qa-answer {
+            font-size: 0.486rem;
+            line-height: 1.3;
+            color: var(--text-secondary);
+            padding-left: 12.15px;
+        }
+
+        .qa-answer strong {
+            color: #8b0000;
+        }
+
+        /* Equation styling */
+        .equation {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4.86px;
+            border-radius: var(--border-radius);
+            margin: 4.86px 0;
+            text-align: center;
+            font-family: 'KaTeX_Main', 'Times New Roman', serif;
+        }
+
+        .dark-mode .equation {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .katex {
+            font-size: 1em !important;
+        }
+
+        /* Exam Specific Info */
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(97.2px, 1fr));
+            gap: 4.86px;
+            margin-bottom: 9.72px;
+        }
+
+        .exam-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 6.48px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .exam-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: linear-gradient(135deg, #8b0000, #dc143c);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 4.05px;
+            font-size: 0.81rem;
+        }
+
+        .exam-name {
+            font-weight: 700;
+            font-size: 0.486rem;
+            color: #8b0000;
+            margin-bottom: 1.62px;
+        }
+
+        .exam-desc {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 9.72px 0;
+            font-size: 0.486rem;
+        }
+
+        th {
+            background: #8b0000;
+            color: white;
+            padding: 4.05px;
+            text-align: left;
+        }
+
+        td {
+            padding: 4.05px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(139, 0, 0, 0.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--card-bg);
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                padding: 4.86px;
+                z-index: 100;
+                width: 129.6px;
+                display: none;
+            }
+            
+            .main-nav.active {
+                display: flex;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 4.05px;
+            }
+            
+            header {
+                padding: 4.86px;
+            }
+            
+            .logo h1 {
+                font-size: 0.81rem;
+            }
+            
+            .panel {
+                padding: 4.86px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 2.43px;
+            }
+            
+            .panel-actions {
+                flex-direction: column;
+            }
+            
+            .welcome-content {
+                padding: 9.72px;
+                margin: 6.48px;
+            }
+            
+            .welcome-content h2 {
+                font-size: 1.053rem;
+            }
+            
+            .welcome-content p {
+                font-size: 0.567rem;
+            }
+            
+            .welcome-logo {
+                font-size: 1.62rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 3.24px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #8b0000;
+            border-radius: 1.62px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc143c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Animation -->
+    <div class="welcome-overlay" id="welcome-overlay">
+        <div class="welcome-content scale-in">
+            <div class="welcome-logo">
+                <i class="fas fa-magnet"></i>
+            </div>
+            <h2>Magnetism MCQs Portal</h2>
+            <p>Master Magnetism for MDCAT, NUMS, HEC, AKU & Competition Exams with 60 MCQs and 30 Conceptual Q&A.</p>
+            <button class="btn btn-primary" id="start-btn" style="padding: 4.86px 9.72px; font-size: 0.648rem;">
+                Get Started <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029VbBeueg0QeajGumGWb0f" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="container">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="logo">
+                <h1>Magnetism MCQs Portal</h1>
+                <p>MDCAT | NUMS | HEC | AKU | Competition Exam Preparation</p>
+            </div>
+            
+            <div class="header-content">
+                <h1>Comprehensive Magnetism with 60 MCQs & 30 Conceptual Q&A</h1>
+                <p>Master key concepts with detailed explanations, exceptional cases, and interactive questions for Pakistani exams</p>
+            </div>
+        </header>
+
+        <!-- Exam Specific Information -->
+        <div class="panel fade-in">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Exam Preparation Focus</h3>
+            </div>
+            <div class="exam-info">
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="exam-name">MDCAT/NUMS</div>
+                    <div class="exam-desc">12-15% weightage in Physics Section</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="exam-name">HEC Test</div>
+                    <div class="exam-desc">Magnetic field & force concepts</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="exam-name">AKU Test</div>
+                    <div class="exam-desc">Medical Entry: Biophysics applications</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="exam-name">Competition</div>
+                    <div class="exam-desc">Olympiad Level: Electromagnetic theory</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-header">
+                <h2>Navigation</h2>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="main-nav" id="main-nav">
+                <button class="nav-btn active" data-tab="intro">
+                    <i class="fas fa-magnet"></i>
+                    <span>Magnetism Intro</span>
+                </button>
+                <button class="nav-btn" data-tab="magnetic-field">
+                    <i class="fas fa-compass"></i>
+                    <span>Magnetic Field</span>
+                </button>
+                <button class="nav-btn" data-tab="force-conductor">
+                    <i class="fas fa-bolt"></i>
+                    <span>Force on Conductor</span>
+                </button>
+                <button class="nav-btn" data-tab="magnetic-flux">
+                    <i class="fas fa-wave-square"></i>
+                    <span>Magnetic Flux</span>
+                </button>
+                <button class="nav-btn" data-tab="equations">
+                    <i class="fas fa-calculator"></i>
+                    <span>Equations</span>
+                </button>
+                <button class="nav-btn" data-tab="sixty-mcqs">
+                    <i class="fas fa-question-circle"></i>
+                    <span>60 MCQs</span>
+                </button>
+                <button class="nav-btn" data-tab="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="total-mcqs">60</div>
+                <div class="stat-label">Total MCQs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="conceptual-qa">30</div>
+                <div class="stat-label">Conceptual Q&A</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-mcqs">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <!-- Notice Message -->
+        <div class="panel fade-in" style="border-left: 3.24px solid #f59e0b;">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Important Notice</h3>
+            </div>
+            <div class="explanation-content">
+                <p><strong>Attention Students:</strong> This portal is designed specifically for Pakistani MDCAT, NUMS, HEC, and AKU exam preparation. If you find any incorrect information or discrepancies, please inform us immediately through the WhatsApp channel. We strive to provide the most accurate and up-to-date content for your success.</p>
+            </div>
+        </div>
+
+        <!-- Magnetism Introduction Tab -->
+        <div class="tab-content active" id="intro-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-magnet"></i>
+                    </div>
+                    <div class="explanation-title">Magnetism: Fundamental Concepts</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Magnetism?</h4>
+                    <p>Magnetism is the force exerted by magnets when they attract or repel each other. Magnets have two poles: North (N) and South (S). Like poles repel, unlike poles attract. The magnetic field originates from the North pole and enters the South pole.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Magnetic Field Lines</div>
+                        <p>Magnetic field lines are imaginary lines that show the direction of magnetic force. They emerge from North pole and enter South pole, forming continuous closed loops. The density of lines indicates field strength.</p>
+                    </div>
+                    
+                    <h4>MDCAT/NUMS Focus Areas:</h4>
+                    <ul>
+                        <li>Properties of magnets and magnetic materials</li>
+                        <li>Magnetic field due to current-carrying conductors</li>
+                        <li>Force on current-carrying conductor in magnetic field</li>
+                        <li>Magnetic flux and electromagnetic induction basics</li>
+                        <li>Applications in medical equipment (MRI)</li>
+                    </ul>
+                    
+                    <h4>Types of Magnetic Materials:</h4>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Behavior</th>
+                            <th>Examples</th>
+                            <th>MDCAT Point</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Ferromagnetic</strong></td>
+                            <td>Strongly attracted to magnets, can be magnetized permanently</td>
+                            <td>Iron, Cobalt, Nickel</td>
+                            <td>Curie temperature: loses magnetism above this temperature</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Paramagnetic</strong></td>
+                            <td>Weakly attracted to magnets</td>
+                            <td>Aluminum, Platinum, Oxygen</td>
+                            <td>Magnetic susceptibility > 0 but small</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diamagnetic</strong></td>
+                            <td>Weakly repelled by magnets</td>
+                            <td>Copper, Silver, Water</td>
+                            <td>Magnetic susceptibility < 0</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Trick: Right-Hand Rules</div>
+                        <p><strong>Right-Hand Thumb Rule:</strong> For straight conductor: thumb in current direction, fingers curl in magnetic field direction. <strong>Right-Hand Grip Rule:</strong> For solenoid: fingers in current direction, thumb points to North pole. <strong>Fleming's Right-Hand Rule:</strong> For generator: thumb = motion, index = field, middle = current.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> A bar magnet is cut into two equal halves along its axis. What happens to the pole strength?</p>
+                        <p><strong>Options:</strong> A) Each half becomes a complete magnet, B) Pole strength of each half becomes half, C) Pole strength remains same, D) Magnet loses magnetism</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>When magnet is cut, each piece develops its own N and S poles</li>
+                            <li>Magnetic moment $m = \text{pole strength} \times \text{length}$</li>
+                            <li>Length becomes half, but magnetic moment also becomes half</li>
+                            <li>Since $m = ml$, and $l$ halves, pole strength must remain same for $m$ to halve</li>
+                            <li>Thus each piece becomes complete magnet with same pole strength → Answer: A & C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Cutting magnet always creates two complete magnets. Pole strength doesn't divide; magnetic moment does.</p>
+                    </div>
+                    
+                    <h4>Table: Field Due to Charge in Different States</h4>
+                    <table>
+                        <tr>
+                            <th>Charge State</th>
+                            <th>Electric Field</th>
+                            <th>Magnetic Field</th>
+                            <th>MDCAT Point</th>
+                        </tr>
+                        <tr>
+                            <td>At Rest</td>
+                            <td>Yes (Coulomb's law)</td>
+                            <td>No</td>
+                            <td>Stationary charge produces only electric field</td>
+                        </tr>
+                        <tr>
+                            <td>Uniform Motion</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Moving charge produces both fields</td>
+                        </tr>
+                        <tr>
+                            <td>Accelerated Motion</td>
+                            <td>Yes (changing)</td>
+                            <td>Yes (changing)</td>
+                            <td>Produces electromagnetic waves</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (5/30)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why do magnetic field lines form closed loops while electric field lines don't?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Magnetic monopoles don't exist in nature (as far as we know). Every magnet has both N and S poles. So field lines emerging from N must enter S, forming closed loops. Electric charges can exist independently (+ or -), so electric field lines can start on + and end on - or extend to infinity.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the origin of magnetic field in magnets?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> In permanent magnets: aligned electron spins (spin magnetic moments). In electromagnets: moving charges (current). According to Ampère's hypothesis: all magnetism is due to circulating currents. Electron orbital motion and spin create tiny current loops that align to produce net magnetism.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can we separate North and South poles?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> No. If you cut a magnet, each piece develops both poles. Even at atomic level, electron behaves like tiny magnet with both poles. No magnetic monopoles have been found experimentally (despite theoretical predictions). This is why Gauss's law for magnetism states: $\nabla \cdot \vec{B} = 0$.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What happens when magnet is heated strongly?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Above Curie temperature, thermal agitation randomizes magnetic domains, and magnet loses magnetism. For iron: Curie temperature = 770°C. On cooling below Curie point, it may regain magnetism if placed in external field. Different materials have different Curie temperatures.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is soft iron used for electromagnet cores?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Soft iron has high magnetic permeability (easily magnetized) and low retentivity (loses magnetism quickly when current stops). This allows electromagnet to be turned on/off. Steel has high retentivity, used for permanent magnets. Soft iron also has low coercivity (needs small field to demagnetize).</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Magnetism Intro MCQs Progress</div>
+                    <div class="progress-stats"><span id="intro-completed">0</span>/8 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="intro-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-magnet"></i> Magnetism Intro MCQs (8)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-intro">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="intro-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Magnetic Field Tab -->
+        <div class="tab-content" id="magnetic-field-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="explanation-title">Magnetic Field Due to Current-Carrying Conductors</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Magnetic Field Around Current-Carrying Conductors:</h4>
+                    <p>A current-carrying conductor produces a magnetic field around it. The field direction is given by Right-Hand Thumb Rule: thumb in current direction, fingers curl in field direction.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Biot-Savart Law (Conceptual)</div>
+                        <p>The magnetic field due to small current element is proportional to current, length of element, and inversely proportional to square of distance. For straight wire: $B = \frac{\mu_0 I}{2\pi r}$ where $r$ is perpendicular distance from wire.</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{Straight wire: } B = \frac{\mu_0 I}{2\pi r} \quad \text{Solenoid: } B = \mu_0 n I \quad \text{Circular coil: } B = \frac{\mu_0 N I}{2R}$
+                    </div>
+                    
+                    <h4>Field Patterns:</h4>
+                    <ul>
+                        <li><strong>Straight wire:</strong> Concentric circles around wire</li>
+                        <li><strong>Solenoid:</strong> Uniform inside (like bar magnet), weak outside</li>
+                        <li><strong>Circular coil:</strong> Similar to bar magnet at center</li>
+                        <li><strong>Toroid:</strong> Field confined inside, zero outside</li>
+                    </ul>
+                    
+                    <h4>Force Between Parallel Current-Carrying Wires:</h4>
+                    <table>
+                        <tr>
+                            <th>Current Direction</th>
+                            <th>Force</th>
+                            <th>Explanation</th>
+                            <th>MDCAT Trick</th>
+                        </tr>
+                        <tr>
+                            <td>Same direction</td>
+                            <td>Attractive</td>
+                            <td>Fields between wires cancel, pressure pushes together</td>
+                            <td>"Same attracts" for parallel currents</td>
+                        </tr>
+                        <tr>
+                            <td>Opposite direction</td>
+                            <td>Repulsive</td>
+                            <td>Fields between wires add, pressure pushes apart</td>
+                            <td>"Opposite repels" for parallel currents</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Superconducting Magnets</div>
+                        <p>Superconducting wires can carry huge currents with zero resistance, producing very strong magnetic fields (used in MRI). Must be cooled below critical temperature (liquid helium: 4.2K). Type II superconductors allow partial field penetration through flux vortices.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Two parallel wires carry currents I and 2I in same direction separated by distance d. Force per unit length on wire carrying current I is F. If distance becomes 2d and currents become 2I and 4I, new force per unit length is:</p>
+                        <p><strong>Options:</strong> A) F, B) 2F, C) 4F, D) F/2</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Force between parallel wires: $F/L = \frac{\mu_0 I_1 I_2}{2\pi d}$</li>
+                            <li>Originally: $F_1 = \frac{\mu_0 (I)(2I)}{2\pi d} = \frac{2\mu_0 I^2}{2\pi d}$</li>
+                            <li>New: $I_1' = 2I$, $I_2' = 4I$, $d' = 2d$</li>
+                            <li>$F_2 = \frac{\mu_0 (2I)(4I)}{2\pi (2d)} = \frac{8\mu_0 I^2}{4\pi d} = \frac{2\mu_0 I^2}{\pi d}$</li>
+                            <li>Compare: $F_2 = 2 \times F_1$ → Answer: B (2F)</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> $F \propto \frac{I_1 I_2}{d}$. Current product doubled from 2I² to 8I² (4×), distance doubled (1/2×), net: 4 × 1/2 = 2×.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (10/30)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is magnetic field inside solenoid uniform?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Because field lines are parallel and equally spaced. For ideal solenoid (infinite length), field inside is uniform and parallel to axis. End effects cause non-uniformity near ends. Field strength: $B = \mu_0 n I$ where n = turns per unit length. Outside ideal solenoid, field is approximately zero.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is difference between solenoid and toroid?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> <strong>Solenoid:</strong> Cylindrical coil, field inside uniform, weak outside. <strong>Toroid:</strong> Doughnut-shaped, field confined completely inside, zero outside. Toroid formula: $B = \frac{\mu_0 N I}{2\pi r}$ where r is radius from center. Toroid has no ends, so no leakage field.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does Earth's magnetic field compare to bar magnet?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Earth behaves like giant bar magnet with S magnetic pole near geographic North (attracts N end of compass). Magnetic axis is tilted ~11° from rotation axis. Field strength ~0.5 Gauss at surface. Origin: dynamo effect in molten iron core. Polarity reverses every few hundred thousand years.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Magnetic Field MCQs Progress</div>
+                    <div class="progress-stats"><span id="magnetic-field-completed">0</span>/10 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="magnetic-field-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-compass"></i> Magnetic Field MCQs (10)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-magnetic-field">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="magnetic-field-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Force on Conductor Tab -->
+        <div class="tab-content" id="force-conductor-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="explanation-title">Force on Current-Carrying Conductor in Magnetic Field</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Force on Current-Carrying Conductor:</h4>
+                    <p>A current-carrying conductor experiences force when placed in magnetic field. Magnitude: $F = BIL\sin\theta$, where $\theta$ is angle between current and magnetic field.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Fleming's Left-Hand Rule</div>
+                        <p>For direction of force: thumb = force, index = field, middle = current. Remember: "First Finger Field, seCond finger Current, Thumb Motion (Force)". Only for positive charges; reverse for electrons.</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{Force on conductor: } F = BIL\sin\theta \quad \text{Force on charge: } F = qvB\sin\theta$
+                    </div>
+                    
+                    <h4>Special Cases:</h4>
+                    <table>
+                        <tr>
+                            <th>Angle (θ)</th>
+                            <th>Force</th>
+                            <th>Explanation</th>
+                            <th>MDCAT Example</th>
+                        </tr>
+                        <tr>
+                            <td>0° (parallel)</td>
+                            <td>Zero</td>
+                            <td>$\sin 0° = 0$, no force</td>
+                            <td>Wire parallel to field experiences no force</td>
+                        </tr>
+                        <tr>
+                            <td>90° (perpendicular)</td>
+                            <td>Maximum</td>
+                            <td>$\sin 90° = 1$, $F_{max} = BIL$</td>
+                            <td>Wire perpendicular to field experiences max force</td>
+                        </tr>
+                        <tr>
+                            <td>Other angles</td>
+                            <td>$BIL\sin\theta$</td>
+                            <td>Force depends on sine of angle</td>
+                            <td>At 30°: force = half of maximum</td>
+                        </tr>
+                    </table>
+                    
+                    <h4>Difference Between Magnetic and Electric Field:</h4>
+                    <table>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Electric Field</th>
+                            <th>Magnetic Field</th>
+                        </tr>
+                        <tr>
+                            <td>Source</td>
+                            <td>Charges (stationary or moving)</td>
+                            <td>Moving charges (current) or magnets</td>
+                        </tr>
+                        <tr>
+                            <td>Effect on charge</td>
+                            <td>Force on any charge: $F = qE$</td>
+                            <td>Force only on moving charge: $F = qvB\sin\theta$</td>
+                        </tr>
+                        <tr>
+                            <td>Work done</td>
+                            <td>Can do work (changes speed)</td>
+                            <td>Does no work (changes direction only)</td>
+                        </tr>
+                        <tr>
+                            <td>Field lines</td>
+                            <td>Start on +, end on -</td>
+                            <td>Form closed loops (no monopoles)</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Hall Effect</div>
+                        <p>When current-carrying conductor is placed in perpendicular magnetic field, voltage develops across conductor (Hall voltage). $V_H = \frac{BI}{nqt}$ where n = charge carrier density, t = thickness. Used to determine carrier type (electrons vs holes) and density in semiconductors.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> A wire of length 2m carrying current 3A is placed at 30° to magnetic field of 0.5T. Force on wire is:</p>
+                        <p><strong>Options:</strong> A) 0.75N, B) 1.5N, C) 3N, D) 6N</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Formula: $F = BIL\sin\theta$</li>
+                            <li>Given: $B = 0.5$T, $I = 3$A, $L = 2$m, $\theta = 30°$</li>
+                            <li>$\sin 30° = 0.5$</li>
+                            <li>$F = 0.5 \times 3 \times 2 \times 0.5 = 1.5$N</li>
+                            <li>Thus answer: B (1.5N)</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember angles: 0°=0, 30°=0.5, 45°=0.707, 60°=0.866, 90°=1. For 30°, force is half of maximum possible force.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (15/30)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why does magnetic field do no work on moving charge?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Magnetic force is always perpendicular to velocity ($\vec{F} = q\vec{v} \times \vec{B}$). Work = $\vec{F} \cdot \vec{d}$, dot product of perpendicular vectors = 0. So magnetic field changes direction but not speed (kinetic energy). Charged particles move in circles/helixes in uniform B field.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is difference between motor and generator effect?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> <strong>Motor:</strong> Current in magnetic field produces force → motion (Fleming's left-hand rule). <strong>Generator:</strong> Motion in magnetic field induces emf → current (Fleming's right-hand rule). Same device can work as either (principle of reversibility).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does mass spectrometer work?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Uses magnetic field to separate ions by mass-to-charge ratio. Ions accelerated by electric field, enter perpendicular B field, follow circular path: $r = \frac{mv}{qB}$. Heavier ions have larger radius. Used in chemistry, biology for analysis.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Force on Conductor MCQs Progress</div>
+                    <div class="progress-stats"><span id="force-conductor-completed">0</span>/10 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="force-conductor-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-bolt"></i> Force on Conductor MCQs (10)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-force-conductor">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="force-conductor-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Magnetic Flux Tab -->
+        <div class="tab-content" id="magnetic-flux-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <div class="explanation-title">Magnetic Flux and Related Concepts</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Magnetic Flux Definition:</h4>
+                    <p>Magnetic flux ($\Phi_B$) is the number of magnetic field lines passing through a surface. $\Phi_B = \vec{B} \cdot \vec{A} = BA\cos\theta$, where $\theta$ is angle between field and normal to surface.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Vector Area</div>
+                        <p>Area vector $\vec{A}$ has magnitude = area, direction = perpendicular (normal) to surface. For coil with N turns: $\Phi = NBA\cos\theta$. Flux is scalar (dot product), unit = Weber (Wb) = T·m².</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{Magnetic flux: } \Phi = BA\cos\theta \quad \text{Faraday's law: } \epsilon = -N\frac{\Delta\Phi}{\Delta t}$
+                    </div>
+                    
+                    <h4>Conditions for Maximum and Minimum Flux:</h4>
+                    <table>
+                        <tr>
+                            <th>Angle (θ)</th>
+                            <th>cosθ</th>
+                            <th>Flux</th>
+                            <th>Physical Situation</th>
+                        </tr>
+                        <tr>
+                            <td>0°</td>
+                            <td>1 (max)</td>
+                            <td>Maximum ($\Phi = BA$)</td>
+                            <td>Field perpendicular to surface (parallel to normal)</td>
+                        </tr>
+                        <tr>
+                            <td>90°</td>
+                            <td>0</td>
+                            <td>Zero</td>
+                            <td>Field parallel to surface (perpendicular to normal)</td>
+                        </tr>
+                        <tr>
+                            <td>180°</td>
+                            <td>-1</td>
+                            <td>$-BA$ (maximum negative)</td>
+                            <td>Field opposite to normal</td>
+                        </tr>
+                    </table>
+                    
+                    <h4>Units and Dimensions:</h4>
+                    <table>
+                        <tr>
+                            <th>Quantity</th>
+                            <th>SI Unit</th>
+                            <th>Other Units</th>
+                            <th>Dimensions</th>
+                        </tr>
+                        <tr>
+                            <td>Magnetic Field (B)</td>
+                            <td>Tesla (T)</td>
+                            <td>Weber/m², Gauss (10⁻⁴ T)</td>
+                            <td>MT⁻²I⁻¹</td>
+                        </tr>
+                        <tr>
+                            <td>Magnetic Flux (Φ)</td>
+                            <td>Weber (Wb)</td>
+                            <td>T·m², Volt-second</td>
+                            <td>ML²T⁻²I⁻¹</td>
+                        </tr>
+                        <tr>
+                            <td>Magnetic Field Intensity (H)</td>
+                            <td>A/m</td>
+                            <td>Oersted (≈79.6 A/m)</td>
+                            <td>IL⁻¹</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Flux Quantization in Superconductors</div>
+                        <p>In superconducting loop, magnetic flux is quantized: $\Phi = n\Phi_0$ where $\Phi_0 = h/2e = 2.07 \times 10^{-15}$ Wb (flux quantum). This demonstrates wave nature of electrons (Cooper pairs). Used in SQUID (Superconducting Quantum Interference Device) for sensitive measurements.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> A circular loop of area 0.1 m² is placed in uniform magnetic field 0.2T. If plane makes 60° with field, flux through loop is:</p>
+                        <p><strong>Options:</strong> A) 0.01 Wb, B) 0.02 Wb, C) 0.017 Wb, D) 0.034 Wb</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Flux: $\Phi = BA\cos\theta$</li>
+                            <li>Given: $B = 0.2$T, $A = 0.1$ m²</li>
+                            <li>Angle between field and normal: if plane makes 60° with field, normal makes 30° with field (complementary)</li>
+                            <li>So $\theta = 30°$, $\cos 30° = \sqrt{3}/2 ≈ 0.866$</li>
+                            <li>$\Phi = 0.2 \times 0.1 \times 0.866 = 0.01732$ Wb ≈ 0.017 Wb</li>
+                            <li>Thus answer: C (0.017 Wb)</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Be careful with angle! "Plane makes angle with field" means angle between field and plane. For flux, need angle between field and normal (90° - given angle).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (20/30)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is difference between B and H fields?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> <strong>B (magnetic flux density):</strong> Total field including material effects, units Tesla. <strong>H (magnetic field intensity):</strong> External applied field, units A/m. Relation: $\vec{B} = \mu_0(\vec{H} + \vec{M})$ where M = magnetization. In vacuum: $B = \mu_0 H$. In materials: $B = \mu H = \mu_0 \mu_r H$.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is Faraday's law negative sign important?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Negative sign indicates Lenz's law: induced emf opposes change causing it (conservation of energy). Mathematically: $\epsilon = -d\Phi/dt$. Without minus sign, energy wouldn't be conserved (perpetual motion possible). Direction found by right-hand rule and Lenz's law.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is magnetic susceptibility?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> $\chi_m = M/H$, measures how easily material magnetizes. Ferromagnetic: $\chi_m$ >> 1 (positive, large). Paramagnetic: $\chi_m$ > 0 (small). Diamagnetic: $\chi_m$ < 0 (negative). Temperature dependence: Curie law for paramagnets: $\chi_m = C/T$. Curie-Weiss for ferromagnets: $\chi_m = C/(T-T_C)$.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Magnetic Flux MCQs Progress</div>
+                    <div class="progress-stats"><span id="magnetic-flux-completed">0</span>/8 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="magnetic-flux-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-wave-square"></i> Magnetic Flux MCQs (8)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-magnetic-flux">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="magnetic-flux-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Equations Tab -->
+        <div class="tab-content" id="equations-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="explanation-title">Equations of Magnetism and Their Interrelations</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Fundamental Equations:</h4>
+                    <div class="equation">
+                        $\text{Force on conductor: } F = BIL\sin\theta$
+                    </div>
+                    <div class="equation">
+                        $\text{Force on charge: } F = qvB\sin\theta$
+                    </div>
+                    <div class="equation">
+                        $\text{Magnetic flux: } \Phi = BA\cos\theta$
+                    </div>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Proportionality Relations</div>
+                        <p>Memorize these for quick MCQ solving: $F \propto B$, $F \propto I$, $F \propto L$, $F \propto \sin\theta$. $\Phi \propto B$, $\Phi \propto A$, $\Phi \propto \cos\theta$. $B \propto I$ for given geometry.</p>
+                    </div>
+                    
+                    <h4>Equation Interrelations and Proportionalities:</h4>
+                    <table>
+                        <tr>
+                            <th>Equation</th>
+                            <th>If this doubles...</th>
+                            <th>Effect on...</th>
+                            <th>MDCAT Trick</th>
+                        </tr>
+                        <tr>
+                            <td>$F = BIL\sin\theta$</td>
+                            <td>Current (I) doubles</td>
+                            <td>Force doubles</td>
+                            <td>$F \propto I$ (linear)</td>
+                        </tr>
+                        <tr>
+                            <td>$F = BIL\sin\theta$</td>
+                            <td>Length (L) doubles</td>
+                            <td>Force doubles</td>
+                            <td>$F \propto L$ (linear)</td>
+                        </tr>
+                        <tr>
+                            <td>$F = BIL\sin\theta$</td>
+                            <td>Angle from 30° to 90°</td>
+                            <td>Force doubles ($\sin30°=0.5$, $\sin90°=1$)</td>
+                            <td>$F \propto \sin\theta$, not $\theta$</td>
+                        </tr>
+                        <tr>
+                            <td>$\Phi = BA\cos\theta$</td>
+                            <td>Area (A) doubles</td>
+                            <td>Flux doubles</td>
+                            <td>$\Phi \propto A$ (linear)</td>
+                        </tr>
+                        <tr>
+                            <td>$\Phi = BA\cos\theta$</td>
+                            <td>Angle from 0° to 60°</td>
+                            <td>Flux halves ($\cos0°=1$, $\cos60°=0.5$)</td>
+                            <td>$\Phi \propto \cos\theta$</td>
+                        </tr>
+                        <tr>
+                            <td>$B = \frac{\mu_0 I}{2\pi r}$</td>
+                            <td>Distance (r) doubles</td>
+                            <td>Field halves</td>
+                            <td>$B \propto 1/r$ (inverse)</td>
+                        </tr>
+                    </table>
+                    
+                    <h4>Competition Level: Special Equations:</h4>
+                    <div class="equation">
+                        $\text{Torque on loop: } \tau = NIAB\sin\theta$
+                    </div>
+                    <div class="equation">
+                        $\text{Hall voltage: } V_H = \frac{BI}{nqt}$
+                    </div>
+                    <div class="equation">
+                        $\text{Cyclotron frequency: } f = \frac{qB}{2\pi m}$
+                    </div>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Motion in Combined E and B Fields</div>
+                        <p>When both electric and magnetic fields present: Velocity selector: $v = E/B$ (particles with this velocity pass undeflected). Crossed fields produce cycloid motion. Hall effect combines E and B. Mass spectrometer uses both fields sequentially.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Force on conductor in magnetic field is F. If current is doubled, length halved, and magnetic field tripled, new force is:</p>
+                        <p><strong>Options:</strong> A) 3F, B) 1.5F, C) 6F, D) F/3</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>$F = BIL\sin\theta$ (assuming $\theta$ constant)</li>
+                            <li>Originally: $F_1 = B I L$ (taking $\sin\theta=1$ for simplicity)</li>
+                            <li>New: $B' = 3B$, $I' = 2I$, $L' = L/2$</li>
+                            <li>$F_2 = (3B)(2I)(L/2) = 3BIL = 3F_1$</li>
+                            <li>Thus new force = 3F → Answer: A</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> $F \propto B \times I \times L$. Multiply factors: 3 × 2 × 0.5 = 3. So 3 times original.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (25/30)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How are $F = BIL$ and $F = qvB$ related?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> For wire: $I = nqAv_d$, $L = v_d t$ (conceptually). Then $F = B(nqAv_d)(v_d t) = nqAv_d t (Bv_d)$. But more directly: force on wire = sum of forces on moving charges in it. For single charge: $F = qvB\sin\theta$. For wire with N charges: $F = NqvB = (nAL)qvB = nqAvB L = (nqvA)BL = IBL$.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is significance of $\mu_0$?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> $\mu_0$ = permeability of free space = $4\pi \times 10^{-7}$ T·m/A. Relates magnetic field to current producing it. In materials: $\mu = \mu_0 \mu_r$ where $\mu_r$ = relative permeability. For vacuum/air: $\mu_r = 1$. For iron: $\mu_r \sim 2000-6000$. $\mu_0 \epsilon_0 = 1/c^2$ where c = speed of light.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is $\sin\theta$ in force but $\cos\theta$ in flux?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Force depends on component of current perpendicular to field: $F \propto \sin\theta$ where $\theta$ = angle between current and field. Flux depends on component of field perpendicular to area: $\Phi \propto \cos\theta$ where $\theta$ = angle between field and normal. Different physical meanings: force maximum when perpendicular, flux maximum when parallel to normal.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Equations MCQs Progress</div>
+                    <div class="progress-stats"><span id="equations-completed">0</span>/9 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="equations-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-calculator"></i> Equations MCQs (9)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-equations">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="equations-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 60 MCQs Tab -->
+        <div class="tab-content" id="sixty-mcqs-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="explanation-title">60 MCQs on Magnetism - Complete Set</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Comprehensive MCQ Coverage:</h4>
+                    <p>This section contains 60 MCQs covering all aspects of Magnetism as per Pakistani MDCAT, NUMS, HEC, and AKU syllabus. Questions are categorized by difficulty: Basic (20), Intermediate (20), Advanced (20).</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy for Exams</div>
+                        <ol>
+                            <li><strong>Identify formula needed:</strong> Force, flux, field, etc.</li>
+                            <li><strong>Check angle carefully:</strong> Is it with plane or normal?</li>
+                            <li><strong>Use right-hand rules:</strong> For direction questions</li>
+                            <li><strong>Eliminate extremes:</strong> Zero force/flux at certain angles</li>
+                            <li><strong>Dimensional analysis:</strong> Check units match</li>
+                            <li><strong>Estimate:</strong> Rough calculations for numericals</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Common MCQ Patterns in Pakistani Exams:</h4>
+                    <ul>
+                        <li><strong>Direct formula application:</strong> $F = BIL\sin\theta$, $\Phi = BA\cos\theta$</li>
+                        <li><strong>Proportionality questions:</strong> "If X changes, what happens to Y?"</li>
+                        <li><strong>Direction questions:</strong> Use right-hand/Fleming's rules</li>
+                        <li><strong>Angle problems:</strong> Force/flux at specific angles</li>
+                        <li><strong>Combination problems:</strong> Multiple changes together</li>
+                        <li><strong>Conceptual understanding:</strong> Properties of magnets, materials</li>
+                    </ul>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Advanced Level: Competition Exam Tricks</div>
+                        <p><strong>Force between wires:</strong> Attractive for same current direction. <strong>Motion in magnetic field:</strong> Circular for perpendicular v and B. <strong>Torque on coil:</strong> $\tau = NIAB\sin\theta$. <strong>Hall effect:</strong> Determines carrier type and density. <strong>Cyclotron:</strong> $r = mv/qB$, $f = qB/2\pi m$ independent of v.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example (Advanced Level):</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample Advanced MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> A charged particle enters uniform magnetic field with velocity at 30° to field. Path will be:</p>
+                        <p><strong>Options:</strong> A) Circular, B) Straight line, C) Helical, D) Parabolic</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Force on charge: $F = qvB\sin\theta$</li>
+                            <li>Component perpendicular to field: $v_\perp = v\sin30° = v/2$</li>
+                            <li>Component parallel to field: $v_\parallel = v\cos30° = v\sqrt{3}/2$</li>
+                            <li>Perpendicular component causes circular motion</li>
+                            <li>Parallel component causes translation along field</li>
+                            <li>Combination: helical path → Answer: C</li>
+                            <li>Special cases: $\theta=0°$: straight line, $\theta=90°$: circular</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> For charged particle in B field: 0°=straight, 90°=circular, any other angle=helical. Pitch = $v_\parallel \times T$ where $T = 2\pi m/qB$.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">60 MCQs Progress</div>
+                    <div class="progress-stats"><span id="sixty-completed">0</span>/60 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="sixty-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-question-circle"></i> 60 Magnetism MCQs</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-sixty">
+                            <i class="fas fa-sync-alt"></i> Refresh All
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="sixty-mcqs-container">
+                    <!-- 60 MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Tab -->
+        <div class="tab-content" id="progress-tab">
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-chart-line"></i> Progress Tracking</h3>
+                </div>
+                
+                <div class="explanation-section">
+                    <div class="explanation-header">
+                        <div class="explanation-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="explanation-title">Your Learning Progress</div>
+                    </div>
+                    
+                    <div class="explanation-content">
+                        <p>Track your progress through 60 MCQs and 30 Conceptual Q&A. Detailed breakdown:</p>
+                        
+                        <div class="progress-section" style="margin-top: 12.15px;">
+                            <div class="progress-header">
+                                <div class="progress-title">Overall Progress</div>
+                                <div class="progress-stats"><span id="overall-completed">0</span>/60 completed</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overall-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px;">
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Magnetism Introduction</div>
+                                    <div class="progress-stats"><span id="intro-summary">0</span>/8</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="intro-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Magnetic Field</div>
+                                    <div class="progress-stats"><span id="magnetic-field-summary">0</span>/10</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="magnetic-field-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Force on Conductor</div>
+                                    <div class="progress-stats"><span id="force-conductor-summary">0</span>/10</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="force-conductor-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Magnetic Flux</div>
+                                    <div class="progress-stats"><span id="magnetic-flux-summary">0</span>/8</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="magnetic-flux-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Equations & Interrelations</div>
+                                    <div class="progress-stats"><span id="equations-summary">0</span>/9</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="equations-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">60 MCQs Set</div>
+                                    <div class="progress-stats"><span id="sixty-summary">0</span>/60</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="sixty-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px; text-align: center;">
+                            <button class="btn btn-primary" id="reset-progress">
+                                <i class="fas fa-redo"></i> Reset Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Magnetism MCQs Portal. MDCAT | NUMS | HEC | AKU | Competition Exam Preparation.</p>
+                <p>Complete coverage with 60 MCQs, 30 Conceptual Q&A, and detailed explanations for Pakistani students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Magnetism MCQ Data - 60 MCQs total + 45 topic MCQs = 105 total
+        const magnetismMCQs = {
+            intro: [
+                {
+                    id: 1,
+                    question: "Magnetic field lines:",
+                    options: ["Start from N, end at S", "Start from S, end at N", "Start and end at same pole", "Have no start or end"],
+                    correctAnswer: 0,
+                    explanation: "Magnetic field lines emerge from North pole and enter South pole, forming continuous closed loops. Unlike electric field lines that start on + and end on - charges."
+                },
+                {
+                    id: 2,
+                    question: "When a bar magnet is cut into two equal halves:",
+                    options: ["Each half becomes complete magnet", "One piece has only N, other only S", "Both lose magnetism", "Pole strength halves"],
+                    correctAnswer: 0,
+                    explanation: "Each piece develops its own N and S poles. Magnetic monopoles don't exist. The two pieces become two smaller but complete magnets."
+                },
+                {
+                    id: 3,
+                    question: "Curie temperature is:",
+                    options: ["Temperature above which ferromagnet loses magnetism", "Temperature below which paramagnet becomes ferromagnet", "Temperature at which superconductor works", "Temperature of Earth's core"],
+                    correctAnswer: 0,
+                    explanation: "Above Curie temperature, thermal agitation randomizes magnetic domains, and ferromagnet becomes paramagnetic. For iron: 770°C."
+                },
+                {
+                    id: 4,
+                    question: "Soft iron is preferred for electromagnet cores because:",
+                    options: ["High permeability, low retentivity", "High retentivity, low permeability", "Low cost, high density", "High conductivity, high melting point"],
+                    correctAnswer: 0,
+                    explanation: "Soft iron magnetizes easily (high permeability) and demagnetizes easily when current stops (low retentivity). This allows electromagnet to be turned on/off."
+                },
+                {
+                    id: 5,
+                    question: "Which produces magnetic field?",
+                    options: ["Moving charge", "Stationary charge", "Both", "Neither"],
+                    correctAnswer: 0,
+                    explanation: "Only moving charges (current) produce magnetic field. Stationary charges produce only electric field. Accelerated charges produce electromagnetic waves."
+                },
+                {
+                    id: 6,
+                    question: "Magnetic field due to current is discovered by:",
+                    options: ["Oersted", "Faraday", "Ampere", "Maxwell"],
+                    correctAnswer: 0,
+                    explanation: "Hans Christian Oersted (1820) discovered that current-carrying wire deflects compass needle, showing link between electricity and magnetism."
+                },
+                {
+                    id: 7,
+                    question: "Right-hand thumb rule gives:",
+                    options: ["Direction of magnetic field around straight conductor", "Direction of force on conductor", "Direction of induced current", "Direction of electric field"],
+                    correctAnswer: 0,
+                    explanation: "Right-hand thumb rule: thumb in current direction, fingers curl in magnetic field direction around straight conductor."
+                },
+                {
+                    id: 8,
+                    question: "Which material is ferromagnetic?",
+                    options: ["Iron", "Copper", "Aluminum", "Silver"],
+                    correctAnswer: 0,
+                    explanation: "Iron, cobalt, nickel are ferromagnetic. Copper is diamagnetic, aluminum is paramagnetic, silver is diamagnetic."
+                }
+            ],
+            magneticField: [
+                {
+                    id: 1,
+                    question: "Magnetic field at center of circular coil of N turns, radius R, current I:",
+                    options: ["$\\frac{\\mu_0 NI}{2R}$", "$\\frac{\\mu_0 NI}{2\\pi R}$", "$\\frac{\\mu_0 I}{2R}$", "$\\frac{\\mu_0 NI}{R}$"],
+                    correctAnswer: 0,
+                    explanation: "$B = \\frac{\\mu_0 NI}{2R}$ at center of circular coil. For single turn: $\\frac{\\mu_0 I}{2R}$. Direction given by right-hand rule."
+                },
+                {
+                    id: 2,
+                    question: "Field inside long solenoid:",
+                    options: ["Uniform", "Zero", "Radial", "Non-uniform"],
+                    correctAnswer: 0,
+                    explanation: "Inside ideal long solenoid: field is uniform and parallel to axis. $B = \\mu_0 nI$ where n = turns per unit length."
+                },
+                {
+                    id: 3,
+                    question: "Two parallel wires carry currents in same direction. They:",
+                    options: ["Attract each other", "Repel each other", "No force", "Rotate"],
+                    correctAnswer: 0,
+                    explanation: "Parallel currents in same direction attract, opposite directions repel. Force per unit length: $F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$."
+                },
+                {
+                    id: 4,
+                    question: "Magnetic field at distance r from long straight wire:",
+                    options: ["$\\frac{\\mu_0 I}{2\\pi r}$", "$\\frac{\\mu_0 I}{2r}$", "$\\frac{\\mu_0 I}{\\pi r}$", "$\\frac{\\mu_0 I}{4\\pi r}$"],
+                    correctAnswer: 0,
+                    explanation: "$B = \\frac{\\mu_0 I}{2\\pi r}$, inversely proportional to distance. Direction: concentric circles around wire (right-hand rule)."
+                },
+                {
+                    id: 5,
+                    question: "Earth's magnetic field:",
+                    options: ["S pole near geographic North", "N pole near geographic North", "No relation", "Changes daily"],
+                    correctAnswer: 0,
+                    explanation: "Earth's magnetic S pole is near geographic North (attracts N end of compass). Magnetic axis tilted ~11° from rotation axis."
+                },
+                {
+                    id: 6,
+                    question: "If current in wire doubles, magnetic field at fixed point:",
+                    options: ["Doubles", "Halves", "Quadruples", "Same"],
+                    correctAnswer: 0,
+                    explanation: "$B \\propto I$ for given geometry. For straight wire: $B = \\frac{\\mu_0 I}{2\\pi r}$, so double I → double B."
+                },
+                {
+                    id: 7,
+                    question: "Field inside toroid:",
+                    options: ["$\\frac{\\mu_0 NI}{2\\pi r}$", "$\\mu_0 nI$", "Zero", "$\\frac{\\mu_0 I}{2R}$"],
+                    correctAnswer: 0,
+                    explanation: "Inside toroid: $B = \\frac{\\mu_0 NI}{2\\pi r}$ where r is distance from center. Outside toroid: B ≈ 0."
+                },
+                {
+                    id: 8,
+                    question: "Unit of magnetic field B is:",
+                    options: ["Tesla", "Weber", "Ampere/m", "Gauss"],
+                    correctAnswer: 0,
+                    explanation: "SI unit: Tesla (T). 1 T = 1 N/A·m. CGS unit: Gauss (G), 1 T = 10⁴ G. Earth's field ~0.5 G = 5×10⁻⁵ T."
+                },
+                {
+                    id: 9,
+                    question: "Permeability of free space μ₀ =",
+                    options: ["$4\\pi \\times 10^{-7}$ T·m/A", "$8.85 \\times 10^{-12}$ C²/N·m²", "$6.67 \\times 10^{-11}$ N·m²/kg²", "$1.6 \\times 10^{-19}$ C"],
+                    correctAnswer: 0,
+                    explanation: "μ₀ = 4π × 10⁻⁷ T·m/A exactly. Related to ε₀ by μ₀ε₀ = 1/c² where c = speed of light."
+                },
+                {
+                    id: 10,
+                    question: "For solenoid, if number of turns per unit length doubles, field:",
+                    options: ["Doubles", "Halves", "Quadruples", "Same"],
+                    correctAnswer: 0,
+                    explanation: "$B = \\mu_0 nI$, so B ∝ n. Double n → double B, if current I constant."
+                }
+            ],
+            forceConductor: [
+                {
+                    id: 1,
+                    question: "Force on current-carrying conductor in magnetic field: F =",
+                    options: ["BIL sinθ", "BIL cosθ", "BI/L sinθ", "BIL"],
+                    correctAnswer: 0,
+                    explanation: "$F = BIL\\sin\\theta$ where θ = angle between current and magnetic field. Maximum when θ=90°: $F_{max} = BIL$."
+                },
+                {
+                    id: 2,
+                    question: "Direction of force given by:",
+                    options: ["Fleming's left-hand rule", "Right-hand thumb rule", "Cork-screw rule", "Lenz's law"],
+                    correctAnswer: 0,
+                    explanation: "Fleming's left-hand rule: thumb = force, index = field, middle = current. For positive charges; reverse for electrons."
+                },
+                {
+                    id: 3,
+                    question: "Maximum force occurs when angle between current and field is:",
+                    options: ["90°", "0°", "45°", "180°"],
+                    correctAnswer: 0,
+                    explanation: "$F = BIL\\sin\\theta$, maximum when sinθ = 1, i.e., θ = 90° (perpendicular)."
+                },
+                {
+                    id: 4,
+                    question: "Zero force occurs when angle between current and field is:",
+                    options: ["0° or 180°", "90°", "45°", "30°"],
+                    correctAnswer: 0,
+                    explanation: "$F = BIL\\sin\\theta$, zero when sinθ = 0, i.e., θ = 0° or 180° (parallel or anti-parallel)."
+                },
+                {
+                    id: 5,
+                    question: "Force on charge q moving with velocity v in magnetic field B:",
+                    options: ["qvB sinθ", "qE", "qB/v", "qvB cosθ"],
+                    correctAnswer: 0,
+                    explanation: "$F = qvB\\sin\\theta$ (Lorentz force). Direction perpendicular to both v and B. Does no work (changes direction only)."
+                },
+                {
+                    id: 6,
+                    question: "If current, length, and field all double, force becomes:",
+                    options: ["8 times", "4 times", "2 times", "Same"],
+                    correctAnswer: 0,
+                    explanation: "$F = BIL\\sin\\theta$. B'=2B, I'=2I, L'=2L → F' = (2B)(2I)(2L) = 8BIL = 8F."
+                },
+                {
+                    id: 7,
+                    question: "Hall effect is used to determine:",
+                    options: ["Type and density of charge carriers", "Resistance of material", "Magnetic field strength", "Current in conductor"],
+                    correctAnswer: 0,
+                    explanation: "Hall voltage $V_H = \\frac{BI}{nqt}$ gives carrier density n. Sign of V_H gives carrier type (+ for holes, - for electrons)."
+                },
+                {
+                    id: 8,
+                    question: "Velocity selector uses crossed E and B fields. Particles pass undeflected if:",
+                    options: ["v = E/B", "v = B/E", "qE = qvB", "Both A and C"],
+                    correctAnswer: 3,
+                    explanation: "Electric force qE balances magnetic force qvB when v = E/B. Only particles with this velocity pass straight. Used in mass spectrometer."
+                },
+                {
+                    id: 9,
+                    question: "Cyclotron frequency f =",
+                    options: ["qB/2πm", "2πm/qB", "qE/B", "B/2πq"],
+                    correctAnswer: 0,
+                    explanation: "$f = \\frac{qB}{2\\pi m}$, independent of velocity and radius. Important for cyclotron operation - constant frequency AC needed."
+                },
+                {
+                    id: 10,
+                    question: "Path of electron in uniform B field with v perpendicular to B:",
+                    options: ["Circular", "Straight line", "Parabolic", "Helical"],
+                    correctAnswer: 0,
+                    explanation: "Force is perpendicular to velocity, causing circular motion. Radius $r = \\frac{mv}{qB}$, frequency $f = \\frac{qB}{2\\pi m}$."
+                }
+            ],
+            magneticFlux: [
+                {
+                    id: 1,
+                    question: "Magnetic flux Φ through area A in field B: Φ =",
+                    options: ["BA cosθ", "BA sinθ", "B/A cosθ", "BA"],
+                    correctAnswer: 0,
+                    explanation: "$\\Phi = \\vec{B} \\cdot \\vec{A} = BA\\cos\\theta$ where θ = angle between B and normal to area."
+                },
+                {
+                    id: 2,
+                    question: "Unit of magnetic flux is:",
+                    options: ["Weber (Wb)", "Tesla (T)", "Henry (H)", "Farad (F)"],
+                    correctAnswer: 0,
+                    explanation: "Weber (Wb) = T·m². Also Volt-second. 1 Wb = 1 T·m² = 1 V·s."
+                },
+                {
+                    id: 3,
+                    question: "Maximum flux occurs when angle between B and normal is:",
+                    options: ["0°", "90°", "45°", "180°"],
+                    correctAnswer: 0,
+                    explanation: "$\\Phi = BA\\cos\\theta$, maximum when cosθ = 1, i.e., θ = 0° (B parallel to normal)."
+                },
+                {
+                    id: 4,
+                    question: "Zero flux occurs when angle between B and normal is:",
+                    options: ["90°", "0°", "45°", "180°"],
+                    correctAnswer: 0,
+                    explanation: "$\\Phi = BA\\cos\\theta$, zero when cosθ = 0, i.e., θ = 90° (B perpendicular to normal, parallel to surface)."
+                },
+                {
+                    id: 5,
+                    question: "If area doubles and field halves, flux:",
+                    options: ["Remains same", "Doubles", "Halves", "Quadruples"],
+                    correctAnswer: 0,
+                    explanation: "$\\Phi \\propto BA$. A'=2A, B'=B/2 → Φ' = (B/2)(2A) = BA = Φ."
+                },
+                {
+                    id: 6,
+                    question: "Faraday's law: induced emf =",
+                    options: ["$-N\\frac{\\Delta\\Phi}{\\Delta t}$", "$N\\frac{\\Delta\\Phi}{\\Delta t}$", "$-\\frac{\\Delta\\Phi}{\\Delta t}$", "$\\frac{\\Delta B}{\\Delta t}A$"],
+                    correctAnswer: 0,
+                    explanation: "Faraday's law: $\\epsilon = -N\\frac{d\\Phi}{dt}$ or $\\epsilon = -N\\frac{\\Delta\\Phi}{\\Delta t}$. Negative sign shows Lenz's law: opposes change."
+                },
+                {
+                    id: 7,
+                    question: "Lenz's law states:",
+                    options: ["Induced current opposes change causing it", "Induced current aids change causing it", "No relation", "Induced emf proportional to rate of change of flux"],
+                    correctAnswer: 0,
+                    explanation: "Lenz's law: direction of induced current such that it opposes the change in flux producing it. Conservation of energy consequence."
+                },
+                {
+                    id: 8,
+                    question: "1 Tesla = ______ Weber/m²",
+                    options: ["1", "10⁴", "10⁻⁴", "10⁸"],
+                    correctAnswer: 0,
+                    explanation: "By definition: 1 T = 1 Wb/m². Also 1 T = 10⁴ Gauss. Earth's field ≈ 5×10⁻⁵ T = 0.5 G."
+                }
+            ],
+            equations: [
+                {
+                    id: 1,
+                    question: "If B doubles, I halves, L same, force becomes:",
+                    options: ["Same", "Doubles", "Halves", "Quadruples"],
+                    correctAnswer: 0,
+                    explanation: "$F = BIL\\sin\\theta$. B'=2B, I'=I/2 → F' = (2B)(I/2)L = BIL = F."
+                },
+                {
+                    id: 2,
+                    question: "If angle changes from 30° to 90°, force becomes:",
+                    options: ["2 times", "Same", "1.73 times", "0.5 times"],
+                    correctAnswer: 0,
+                    explanation: "$F \\propto \\sin\\theta$. sin30°=0.5, sin90°=1. So ratio = 1/0.5 = 2 times."
+                },
+                {
+                    id: 3,
+                    question: "Flux through coil: Φ = NBA cosθ. If N doubles and θ changes from 0° to 60°, new flux/original =",
+                    options: ["1", "0.5", "2", "1.73"],
+                    correctAnswer: 0,
+                    explanation: "Originally: Φ₁ = NBA cos0° = NBA. New: Φ₂ = (2N)BA cos60° = 2NBA × 0.5 = NBA. So ratio = 1."
+                },
+                {
+                    id: 4,
+                    question: "Force between wires: $F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$. If currents triple and distance halves, force becomes:",
+                    options: ["18 times", "9 times", "4.5 times", "36 times"],
+                    correctAnswer: 0,
+                    explanation: "$F \\propto \\frac{I_1 I_2}{d}$. I₁'=3I₁, I₂'=3I₂, d'=d/2 → F' ∝ (3×3)/(1/2) = 9 × 2 = 18 times."
+                },
+                {
+                    id: 5,
+                    question: "Radius of circular path: $r = \\frac{mv}{qB}$. If B halves and v doubles, r becomes:",
+                    options: ["4 times", "2 times", "Same", "0.5 times"],
+                    correctAnswer: 0,
+                    explanation: "$r \\propto \\frac{v}{B}$. v'=2v, B'=B/2 → r' ∝ (2v)/(B/2) = 4(v/B) = 4 times."
+                },
+                {
+                    id: 6,
+                    question: "Cyclotron frequency $f = \\frac{qB}{2\\pi m}$. If B doubles, f becomes:",
+                    options: ["2 times", "Same", "0.5 times", "4 times"],
+                    correctAnswer: 0,
+                    explanation: "$f \\propto B$. So double B → double f. Independent of v and r."
+                },
+                {
+                    id: 7,
+                    question: "Hall voltage $V_H = \\frac{BI}{nqt}$. If B and I both double, V_H becomes:",
+                    options: ["4 times", "2 times", "Same", "0.5 times"],
+                    correctAnswer: 0,
+                    explanation: "$V_H \\propto BI$. B'=2B, I'=2I → V_H' ∝ (2B)(2I) = 4BI = 4 times."
+                },
+                {
+                    id: 8,
+                    question: "Torque on coil $\\tau = NIAB\\sin\\theta$. If area doubles and θ changes from 90° to 30°, torque becomes:",
+                    options: ["Same", "2 times", "0.5 times", "1.73 times"],
+                    correctAnswer: 0,
+                    explanation: "Originally: τ₁ = NIAB sin90° = NIAB. New: τ₂ = NI(2A)B sin30° = 2NIAB × 0.5 = NIAB. So same."
+                },
+                {
+                    id: 9,
+                    question: "From $F = qvB$ and $F = BIL$, relation between I and v:",
+                    options: ["I = nqAv", "v = I/q", "I = qv", "v = nqAI"],
+                    correctAnswer: 0,
+                    explanation: "For wire: I = nqAv where n = carrier density, q = charge, A = area, v = drift velocity. Connects microscopic (v) and macroscopic (I)."
+                }
+            ],
+            sixty: [
+                {
+                    id: 1,
+                    question: "A magnet is cut into three equal parts. Number of poles:",
+                    options: ["6", "2", "3", "1"],
+                    correctAnswer: 0,
+                    explanation: "Each piece has N and S poles. 3 pieces × 2 poles each = 6 poles total. Magnetic monopoles don't exist."
+                },
+                {
+                    id: 2,
+                    question: "Relative permeability of iron is about:",
+                    options: ["1000-6000", "1", "0.999", "10⁻⁵"],
+                    correctAnswer: 0,
+                    explanation: "Iron (ferromagnetic): μ_r ≈ 2000-6000. Air/vacuum: μ_r = 1. Paramagnets: μ_r slightly > 1. Diamagnets: μ_r slightly < 1."
+                },
+                {
+                    id: 3,
+                    question: "Magnetic field inside solenoid depends on:",
+                    options: ["Current and turns per unit length", "Diameter of solenoid", "Material of wire", "Length of solenoid only"],
+                    correctAnswer: 0,
+                    explanation: "$B = \\mu_0 n I$ for air-core. n = turns per unit length. Independent of diameter for ideal solenoid."
+                },
+                {
+                    id: 4,
+                    question: "Force between two parallel wires 2m apart carrying 5A each:",
+                    options: ["$2.5 \\times 10^{-6}$ N/m attractive", "$5 \\times 10^{-6}$ N/m repulsive", "$1 \\times 10^{-5}$ N/m attractive", "$2.5 \\times 10^{-6}$ N/m repulsive"],
+                    correctAnswer: 0,
+                    explanation: "$F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d} = \\frac{4\\pi\\times10^{-7}\\times5\\times5}{2\\pi\\times2} = 2.5\\times10^{-6}$ N/m. Same direction → attractive."
+                },
+                {
+                    id: 5,
+                    question: "A wire carries current east. Magnetic field at point north of wire is:",
+                    options: ["Vertically upward", "Vertically downward", "East", "West"],
+                    correctAnswer: 0,
+                    explanation: "Right-hand rule: thumb east (current), fingers curl north of wire → field vertically upward (out of page if drawn)."
+                },
+                {
+                    id: 6,
+                    question: "Electron moving horizontally enters vertical magnetic field. Path:",
+                    options: ["Horizontal circle", "Vertical circle", "Straight line", "Helix"],
+                    correctAnswer: 0,
+                    explanation: "Force perpendicular to both v (horizontal) and B (vertical) → horizontal force → horizontal circular path."
+                },
+                {
+                    id: 7,
+                    question: "Proton and α-particle enter same B field with same velocity. Ratio of radii (r_p:r_α):",
+                    options: ["1:2", "2:1", "1:1", "4:1"],
+                    correctAnswer: 0,
+                    explanation: "$r = \\frac{mv}{qB}$. For α: m_α=4m_p, q_α=2q_p. So $r_α = \\frac{4m_p v}{2q_p B} = 2\\frac{m_p v}{q_p B} = 2r_p$. Ratio 1:2."
+                },
+                {
+                    id: 8,
+                    question: "Current loop behaves as:",
+                    options: ["Magnetic dipole", "Electric dipole", "Both", "Neither"],
+                    correctAnswer: 0,
+                    explanation: "Current loop has magnetic dipole moment $\\vec{m} = I\\vec{A}$. Field pattern similar to bar magnet."
+                },
+                {
+                    id: 9,
+                    question: "1 Weber = ______ Tesla × m²",
+                    options: ["1", "10⁴", "10⁻⁴", "10⁸"],
+                    correctAnswer: 0,
+                    explanation: "By definition: 1 Wb = 1 T·m². Also 1 Wb = 1 V·s. Flux through 1 m² area with 1 T field = 1 Wb."
+                },
+                {
+                    id: 10,
+                    question: "Susceptibility of diamagnetic material is:",
+                    options: ["Negative and small", "Positive and small", "Positive and large", "Zero"],
+                    correctAnswer: 0,
+                    explanation: "Diamagnetic: χ_m < 0 (negative), small magnitude (~10⁻⁵). Paramagnetic: χ_m > 0, small. Ferromagnetic: χ_m >> 1."
+                },
+                {
+                    id: 11,
+                    question: "A coil of 100 turns, area 0.01 m² in 0.1T field at 60° to normal. Flux:",
+                    options: ["0.05 Wb", "0.1 Wb", "0.01 Wb", "0.005 Wb"],
+                    correctAnswer: 0,
+                    explanation: "Φ = NBA cosθ = 100 × 0.1 × 0.01 × cos60° = 100 × 0.1 × 0.01 × 0.5 = 0.05 Wb."
+                },
+                {
+                    id: 12,
+                    question: "Magnetic moment of electron due to spin is:",
+                    options: ["Bohr magneton", "Nuclear magneton", "Ampere-turn", "Weber-meter"],
+                    correctAnswer: 0,
+                    explanation: "Bohr magneton μ_B = eħ/2m_e = 9.27×10⁻²⁴ J/T. Electron spin magnetic moment ≈ μ_B (actually 1.00116μ_B)."
+                },
+                {
+                    id: 13,
+                    question: "Retentivity is:",
+                    options: ["Ability to retain magnetism", "Ability to get magnetized", "Resistance to demagnetization", "Magnetic strength"],
+                    correctAnswer: 0,
+                    explanation: "Retentivity = residual magnetization after removing magnetizing field. High for permanent magnets, low for electromagnets."
+                },
+                {
+                    id: 14,
+                    question: "Coercivity is:",
+                    options: ["Resistance to demagnetization", "Ability to get magnetized", "Residual magnetism", "Magnetic field strength"],
+                    correctAnswer: 0,
+                    explanation: "Coercivity = reverse field needed to reduce magnetization to zero. High for permanent magnets, low for soft iron."
+                },
+                {
+                    id: 15,
+                    question: "Magnetization M defined as:",
+                    options: ["Magnetic moment per unit volume", "Magnetic field per unit volume", "Pole strength per unit area", "Flux per unit area"],
+                    correctAnswer: 0,
+                    explanation: "M = magnetic dipole moment per unit volume. Units A/m. B = μ₀(H + M). For linear materials: M = χ_m H."
+                },
+                {
+                    id: 16,
+                    question: "Domain theory explains:",
+                    options: ["Ferromagnetism", "Paramagnetism", "Diamagnetism", "All magnetism"],
+                    correctAnswer: 0,
+                    explanation: "Weiss domain theory: ferromagnetic materials have small regions (domains) with aligned moments. External field aligns domains."
+                },
+                {
+                    id: 17,
+                    question: "For paramagnetic material, susceptibility varies with temperature as:",
+                    options: ["χ ∝ 1/T", "χ ∝ T", "χ constant", "χ ∝ T²"],
+                    correctAnswer: 0,
+                    explanation: "Curie law: χ = C/T for paramagnets. Curie-Weiss law: χ = C/(T-θ) for ferromagnets near Curie point."
+                },
+                {
+                    id: 18,
+                    question: "A wire of length L carrying current I is bent into circle. Magnetic moment:",
+                    options: ["I L²/4π", "I L/2π", "I L²/2π", "I L/4π"],
+                    correctAnswer: 0,
+                    explanation: "Circumference L = 2πR → R = L/2π. Area A = πR² = π(L/2π)² = L²/4π. Magnetic moment m = IA = I × L²/4π."
+                },
+                {
+                    id: 19,
+                    question: "Tangent galvanometer measures:",
+                    options: ["Current", "Voltage", "Resistance", "Charge"],
+                    correctAnswer: 0,
+                    explanation: "Uses tangent law: B_h tanθ = B_coil. Current I ∝ tanθ. Can be calibrated to measure current absolutely."
+                },
+                {
+                    id: 20,
+                    question: "Moving coil galvanometer works on principle of:",
+                    options: ["Torque on current loop in magnetic field", "Force on current in magnetic field", "Electromagnetic induction", "Hall effect"],
+                    correctAnswer: 0,
+                    explanation: "Coil in radial magnetic field experiences torque τ = NIAB. Deflection θ ∝ I (for restoring torque from spring)."
+                },
+                {
+                    id: 21,
+                    question: "Sensitivity of galvanometer increased by:",
+                    options: ["Increasing number of turns", "Decreasing spring constant", "Increasing magnetic field", "All of these"],
+                    correctAnswer: 3,
+                    explanation: "Sensitivity = deflection per unit current. Increases with N, B, A, and decreases with k (spring constant)."
+                },
+                {
+                    id: 22,
+                    question: "Ammeter is galvanometer with:",
+                    options: ["Low resistance shunt", "High resistance series", "No modification", "High resistance shunt"],
+                    correctAnswer: 0,
+                    explanation: "Ammeter: low resistance shunt parallel to galvanometer to carry most current. Voltmeter: high resistance in series."
+                },
+                {
+                    id: 23,
+                    question: "Cyclotron cannot accelerate:",
+                    options: ["Electrons", "Protons", "Deuterons", "Alpha particles"],
+                    correctAnswer: 0,
+                    explanation: "Electrons gain relativistic mass quickly (m increases with v), so frequency f = qB/2πm changes, losing resonance. Synchrotron needed."
+                },
+                {
+                    id: 24,
+                    question: "Mass spectrometer separates ions based on:",
+                    options: ["m/q ratio", "Charge only", "Mass only", "Velocity only"],
+                    correctAnswer: 0,
+                    explanation: "Radius r = mv/qB. After acceleration: ½mv² = qV, so v = √(2qV/m). Then r = (m/q) × √(2V)/B. So r ∝ √(m/q)."
+                },
+                {
+                    id: 25,
+                    question: "Charged particle in crossed E and B fields moves straight if:",
+                    options: ["v = E/B", "qE = qvB", "Both A and B", "v = B/E"],
+                    correctAnswer: 2,
+                    explanation: "Electric force qE balances magnetic force qvB when v = E/B. Only particles with this specific velocity pass undeflected."
+                },
+                {
+                    id: 26,
+                    question: "A 10cm long wire carries 2A at 30° to 0.5T field. Force:",
+                    options: ["0.05 N", "0.1 N", "0.025 N", "0.005 N"],
+                    correctAnswer: 0,
+                    explanation: "F = BIL sinθ = 0.5 × 2 × 0.1 × sin30° = 0.5 × 2 × 0.1 × 0.5 = 0.05 N."
+                },
+                {
+                    id: 27,
+                    question: "Flux through 0.2 m² area in 0.3T field at 45° to normal:",
+                    options: ["0.0424 Wb", "0.06 Wb", "0.03 Wb", "0.0848 Wb"],
+                    correctAnswer: 0,
+                    explanation: "Φ = BA cosθ = 0.3 × 0.2 × cos45° = 0.06 × 0.7071 = 0.0424 Wb."
+                },
+                {
+                    id: 28,
+                    question: "Two identical bar magnets placed end to end. Resultant magnetic moment:",
+                    options: ["2m if same direction, 0 if opposite", "m if same direction, 0 if opposite", "2m always", "0 always"],
+                    correctAnswer: 0,
+                    explanation: "Magnetic moments add vectorially. Same direction: 2m. Opposite direction (anti-parallel): 0."
+                },
+                {
+                    id: 29,
+                    question: "Hysteresis loss is proportional to:",
+                    options: ["Area of hysteresis loop", "Slope of hysteresis loop", "Coercivity only", "Retentivity only"],
+                    correctAnswer: 0,
+                    explanation: "Energy dissipated per cycle = area of B-H loop. Smaller area for soft iron (electromagnets), larger for steel (permanent magnets)."
+                },
+                {
+                    id: 30,
+                    question: "Magnetic field is:",
+                    options: ["Conservative", "Non-conservative", "Sometimes conservative", "Cannot say"],
+                    correctAnswer: 1,
+                    explanation: "Line integral of B around closed path ≠ 0 (Ampere's law: ∮B·dl = μ₀I). So B is non-conservative. Electric field due to charges is conservative (∮E·dl = 0)."
+                },
+                {
+                    id: 31,
+                    question: "Gauss's law for magnetism: ∮B·dA = 0 means:",
+                    options: ["No magnetic monopoles", "Magnetic field lines are closed", "Both A and B", "Magnetic flux through closed surface is zero"],
+                    correctAnswer: 3,
+                    explanation: "All are correct. Net magnetic flux through any closed surface is zero because magnetic monopoles don't exist → field lines form closed loops."
+                },
+                {
+                    id: 32,
+                    question: "Magnetic field at a point due to small current element is:",
+                    options: ["Perpendicular to both element and position vector", "Parallel to current element", "Radial", "Circumferential only"],
+                    correctAnswer: 0,
+                    explanation: "From Biot-Savart law: dB ∝ (Idl × r̂)/r². So dB perpendicular to both dl (current element) and r (position vector)."
+                },
+                {
+                    id: 33,
+                    question: "For circular coil, magnetic field at center is directed:",
+                    options: ["Along axis", "Radially outward", "Tangential", "Circumferential"],
+                    correctAnswer: 0,
+                    explanation: "Right-hand rule: fingers in current direction, thumb points along axis in direction of field at center."
+                },
+                {
+                    id: 34,
+                    question: "Solenoid with iron core has field:",
+                    options: ["μ_r times field without core", "Same as without core", "1/μ_r times", "Zero"],
+                    correctAnswer: 0,
+                    explanation: "B = μ₀μ_r nI = μ nI. For iron, μ_r ~ 2000-6000, so field much stronger with core."
+                },
+                {
+                    id: 35,
+                    question: "Magnetic field due to straight wire is:",
+                    options: ["Inversely proportional to distance", "Directly proportional to distance", "Independent of distance", "Proportional to square of distance"],
+                    correctAnswer: 0,
+                    explanation: "B = μ₀I/2πr, so B ∝ 1/r. Halve distance → double field."
+                },
+                {
+                    id: 36,
+                    question: "For toroid, field outside is:",
+                    options: ["Approximately zero", "Same as inside", "Half of inside", "Twice inside"],
+                    correctAnswer: 0,
+                    explanation: "Toroid confines field completely inside. Outside field ≈ 0 ideal, very small practical."
+                },
+                {
+                    id: 37,
+                    question: "A charged particle enters magnetic field. Which remains constant?",
+                    options: ["Kinetic energy", "Velocity", "Momentum", "All"],
+                    correctAnswer: 0,
+                    explanation: "Magnetic force perpendicular to motion → does no work → kinetic energy constant. Velocity magnitude constant, direction changes."
+                },
+                {
+                    id: 38,
+                    question: "Force on current loop in uniform magnetic field:",
+                    options: ["Zero", "BIL", "NIAB", "Depends on orientation"],
+                    correctAnswer: 0,
+                    explanation: "Net force on closed current loop in uniform B field is zero. Torque may exist: τ = m × B."
+                },
+                {
+                    id: 39,
+                    question: "Torque on coil is maximum when plane of coil is:",
+                    options: ["Parallel to magnetic field", "Perpendicular to magnetic field", "At 45° to field", "At 30° to field"],
+                    correctAnswer: 0,
+                    explanation: "τ = NIAB sinθ where θ = angle between normal and B. Maximum when normal ⊥ B, i.e., plane ∥ B (θ=90°)."
+                },
+                {
+                    id: 40,
+                    question: "Magnetic field inside current-carrying toroid is:",
+                    options: ["Non-uniform", "Uniform", "Zero", "Radial"],
+                    correctAnswer: 0,
+                    explanation: "B = μ₀NI/2πr, depends on r (distance from center). So non-uniform (varies with r)."
+                },
+                {
+                    id: 41,
+                    question: "A current I flows in circular loop. Magnetic field at center due to small arc (length dl) is:",
+                    options: ["Perpendicular to plane of loop", "In plane of loop", "Radial", "Tangential"],
+                    correctAnswer: 0,
+                    explanation: "From symmetry, all contributions at center are along axis (perpendicular to plane). Components in plane cancel."
+                },
+                {
+                    id: 42,
+                    question: "Magnetic field lines:",
+                    options: ["Never intersect", "Can intersect", "Always intersect", "Intersect at poles"],
+                    correctAnswer: 0,
+                    explanation: "Field lines never intersect because at intersection, field would have two directions, which is impossible."
+                },
+                {
+                    id: 43,
+                    question: "Magnetic field due to straight wire at a point on wire is:",
+                    options: ["Zero", "Infinite", "μ₀I/2πr", "Cannot determine"],
+                    correctAnswer: 0,
+                    explanation: "At point on wire (r=0), formula B = μ₀I/2πr gives infinity, but actually field is zero because current element is parallel to position vector (dl ∥ r)."
+                },
+                {
+                    id: 44,
+                    question: "Magnetic moment of current loop is a:",
+                    options: ["Vector", "Scalar", "Tensor", "Complex number"],
+                    correctAnswer: 0,
+                    explanation: "m = IA, direction perpendicular to plane (right-hand rule). Vector quantity, unit A·m²."
+                },
+                {
+                    id: 45,
+                    question: "Magnetic field inside hollow current-carrying conductor:",
+                    options: ["Zero", "Uniform", "Non-zero constant", "Radial"],
+                    correctAnswer: 0,
+                    explanation: "From Ampere's law, for points inside hollow region (no current enclosed), B = 0. Similar to electrostatics."
+                },
+                {
+                    id: 46,
+                    question: "A wire loop is moved in magnetic field. Induced emf depends on:",
+                    options: ["Rate of change of flux", "Flux", "Area", "Magnetic field"],
+                    correctAnswer: 0,
+                    explanation: "Faraday's law: ε = -dΦ/dt. Depends on rate of change of flux, not flux itself. Constant flux → no emf."
+                },
+                {
+                    id: 47,
+                    question: "Diamagnetism is:",
+                    options: ["Present in all materials", "Present only in special materials", "Strongest magnetism", "Temperature independent"],
+                    correctAnswer: 0,
+                    explanation: "Diamagnetism is weak and present in all materials (due to orbital motion). Overwhelmed by para/ferromagnetism if present."
+                },
+                {
+                    id: 48,
+                    question: "Magnetic declination is:",
+                    options: ["Angle between geographic and magnetic meridian", "Angle of dip", "Horizontal component of Earth's field", "Vertical component"],
+                    correctAnswer: 0,
+                    explanation: "Declination = angle between geographic north and magnetic north. Dip/inclination = angle with horizontal."
+                },
+                {
+                    id: 49,
+                    question: "Tangent law in magnetism: B = Bₕ tanθ applies to:",
+                    options: ["Tangent galvanometer", "Moving coil galvanometer", "Vibration magnetometer", "Suspended coil"],
+                    correctAnswer: 0,
+                    explanation: "In tangent galvanometer: B_coil = Bₕ tanθ where Bₕ = horizontal component of Earth's field, θ = deflection."
+                },
+                {
+                    id: 50,
+                    question: "Vibration magnetometer measures:",
+                    options: ["Magnetic moment", "Magnetic field", "Current", "Frequency"],
+                    correctAnswer: 0,
+                    explanation: "Period T = 2π√(I/mB). For given magnet (I constant) in known B, can find m. Or known m to find B."
+                },
+                {
+                    id: 51,
+                    question: "Magnetic field due to solenoid is similar to:",
+                    options: ["Bar magnet", "Straight wire", "Circular coil", "Toroid"],
+                    correctAnswer: 0,
+                    explanation: "Solenoid field pattern identical to bar magnet: uniform inside, with N and S poles at ends."
+                },
+                {
+                    id: 52,
+                    question: "For ferromagnetic material, susceptibility:",
+                    options: ["Depends on history (hysteresis)", "Constant", "Zero", "Negative"],
+                    correctAnswer: 0,
+                    explanation: "Ferromagnets show hysteresis: magnetization depends on history (previous magnetizing fields). χ not constant."
+                },
+                {
+                    id: 53,
+                    question: "Magnetic field intensity H is defined as:",
+                    options: ["B/μ₀ - M", "B/μ", "B/μ₀", "μ₀B"],
+                    correctAnswer: 0,
+                    explanation: "H = B/μ₀ - M. In linear materials: B = μH, M = χH, so B = μ₀(H + M) = μ₀(1+χ)H = μ₀μ_r H."
+                },
+                {
+                    id: 54,
+                    question: "Unit of magnetic susceptibility is:",
+                    options: ["Dimensionless", "A/m", "T", "Wb/m"],
+                    correctAnswer: 0,
+                    explanation: "χ_m = M/H, both M and H have units A/m, so χ_m dimensionless."
+                },
+                {
+                    id: 55,
+                    question: "Electromagnets are made with:",
+                    options: ["Soft iron", "Steel", "Alnico", "Cobalt"],
+                    correctAnswer: 0,
+                    explanation: "Soft iron: high permeability (easily magnetized), low retentivity (easily demagnetized when current off)."
+                },
+                {
+                    id: 56,
+                    question: "Permanent magnets are made with:",
+                    options: ["Steel", "Soft iron", "Copper", "Aluminum"],
+                    correctAnswer: 0,
+                    explanation: "Steel, alnico, rare-earth materials: high retentivity and coercivity (retain magnetism, hard to demagnetize)."
+                },
+                {
+                    id: 57,
+                    question: "Magnetic screening is done with:",
+                    options: ["Soft iron", "Steel", "Copper", "Air"],
+                    correctAnswer: 0,
+                    explanation: "Soft iron (high permeability) provides low reluctance path, diverting magnetic field lines around protected region."
+                },
+                {
+                    id: 58,
+                    question: "Magnetic permeability μ =",
+                    options: ["B/H", "H/B", "M/H", "B/M"],
+                    correctAnswer: 0,
+                    explanation: "μ = B/H. For vacuum: μ₀ = B/H. Relative permeability μ_r = μ/μ₀."
+                },
+                {
+                    id: 59,
+                    question: "For paramagnetic substance, μ_r is:",
+                    options: ["Slightly greater than 1", "Slightly less than 1", "Much greater than 1", "1"],
+                    correctAnswer: 0,
+                    explanation: "Paramagnetic: μ_r > 1 but close to 1 (~1.00001). Diamagnetic: μ_r < 1 (~0.99999). Ferromagnetic: μ_r >> 1."
+                },
+                {
+                    id: 60,
+                    question: "Magnetic field at center of square loop of side a carrying current I:",
+                    options: ["$\\frac{2\\sqrt{2}\\mu_0 I}{\\pi a}$", "$\\frac{\\mu_0 I}{2a}$", "$\\frac{\\mu_0 I}{\\pi a}$", "$\\frac{\\mu_0 I}{\\sqrt{2}\\pi a}$"],
+                    correctAnswer: 0,
+                    explanation: "Field due to one side at center: $B_1 = \\frac{\\mu_0 I}{4\\pi (a/2)} (\\sin45°+\\sin45°) = \\frac{\\mu_0 I}{\\pi a}\\frac{\\sqrt{2}}{2}$. Four sides: $B = 4B_1 = \\frac{2\\sqrt{2}\\mu_0 I}{\\pi a}$."
+                }
+            ]
+        };
+
+        // Progress tracking
+        let progress = {
+            intro: Array(magnetismMCQs.intro.length).fill(false),
+            magneticField: Array(magnetismMCQs.magneticField.length).fill(false),
+            forceConductor: Array(magnetismMCQs.forceConductor.length).fill(false),
+            magneticFlux: Array(magnetismMCQs.magneticFlux.length).fill(false),
+            equations: Array(magnetismMCQs.equations.length).fill(false),
+            sixty: Array(magnetismMCQs.sixty.length).fill(false)
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the application
+            initApp();
+            
+            function initApp() {
+                // Set up event listeners for welcome screen
+                document.getElementById('start-btn').addEventListener('click', () => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                });
+                
+                // Hide welcome animation after delay
+                setTimeout(() => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                }, 5000);
+                
+                // Load progress from localStorage
+                loadProgress();
+                
+                // Set up tab navigation
+                setupTabs();
+                
+                // Set up event listeners
+                setupEventListeners();
+                
+                // Load MCQs
+                loadAllMCQs();
+                
+                // Update progress display
+                updateProgress();
+                
+                // Apply animations
+                applyAnimations();
+                
+                // Render KaTeX equations
+                renderKaTeX();
+            }
+            
+            function setupTabs() {
+                const tabButtons = document.querySelectorAll('.nav-btn[data-tab]');
+                const tabContents = document.querySelectorAll('.tab-content');
+                
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.getAttribute('data-tab');
+                        
+                        // Update active tab button
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Show active content
+                        tabContents.forEach(content => content.classList.remove('active'));
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
+                        
+                        // Re-render KaTeX for new content
+                        setTimeout(renderKaTeX, 100);
+                    });
+                });
+            }
+            
+            function setupEventListeners() {
+                // Hamburger menu toggle
+                document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+                
+                // Theme toggle
+                document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+                
+                // Refresh buttons for each topic
+                document.getElementById('refresh-intro').addEventListener('click', () => loadTopicMCQs('intro'));
+                document.getElementById('refresh-magnetic-field').addEventListener('click', () => loadTopicMCQs('magneticField'));
+                document.getElementById('refresh-force-conductor').addEventListener('click', () => loadTopicMCQs('forceConductor'));
+                document.getElementById('refresh-magnetic-flux').addEventListener('click', () => loadTopicMCQs('magneticFlux'));
+                document.getElementById('refresh-equations').addEventListener('click', () => loadTopicMCQs('equations'));
+                document.getElementById('refresh-sixty').addEventListener('click', () => loadTopicMCQs('sixty'));
+                
+                // Reset progress button
+                document.getElementById('reset-progress').addEventListener('click', resetProgress);
+            }
+            
+            function toggleMenu() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const mainNav = document.getElementById('main-nav');
+                
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            }
+            
+            function toggleTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                document.body.classList.toggle('dark-mode');
+                themeToggle.classList.toggle('dark');
+                saveToLocalStorage('darkMode', document.body.classList.contains('dark-mode'));
+            }
+            
+            function loadAllMCQs() {
+                // Load MCQs for each topic
+                loadTopicMCQs('intro');
+                loadTopicMCQs('magneticField');
+                loadTopicMCQs('forceConductor');
+                loadTopicMCQs('magneticFlux');
+                loadTopicMCQs('equations');
+                loadTopicMCQs('sixty');
+            }
+            
+            function loadTopicMCQs(topic) {
+                const container = document.getElementById(`${topic}-mcqs-container`);
+                if (!container) return;
+                
+                container.innerHTML = '';
+                
+                // Randomize order of MCQs for this topic
+                const shuffledMCQs = [...magnetismMCQs[topic]].sort(() => Math.random() - 0.5);
+                
+                shuffledMCQs.forEach(mcq => {
+                    const mcqCard = createMCQCard(mcq, topic);
+                    container.appendChild(mcqCard);
+                });
+                
+                // Re-render KaTeX
+                setTimeout(renderKaTeX, 100);
+            }
+            
+            function createMCQCard(mcq, topic) {
+                const card = document.createElement('div');
+                card.className = 'card mcq-card fade-in';
+                card.id = `${topic}-mcq-${mcq.id}`;
+                
+                // Check if this MCQ has been completed
+                const isCompleted = progress[topic][mcq.id - 1];
+                
+                // Randomize option order
+                const options = [...mcq.options];
+                const correctAnswer = mcq.correctAnswer;
+                const correctOption = options[correctAnswer];
+                
+                // Shuffle options
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
+                
+                // Find new index of correct answer after shuffling
+                const newCorrectIndex = options.indexOf(correctOption);
+                
+                card.innerHTML = `
+                    <div class="mcq-info">
+                        <div class="mcq-id">MCQ #${mcq.id} ${isCompleted ? '<i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>' : ''}</div>
+                        <div class="mcq-subject">${getTopicName(topic)}</div>
+                        <div class="mcq-question">${mcq.question}</div>
+                        <div class="mcq-options">
+                            ${options.map((option, index) => `
+                                <div class="mcq-option" data-option="${index}" data-correct="${index === newCorrectIndex}">${String.fromCharCode(65 + index)}) ${option}</div>
+                            `).join('')}
+                        </div>
+                        <div class="mcq-explanation">
+                            <div class="explanation-title">Explanation:</div>
+                            <div class="explanation-content">${mcq.explanation}</div>
+                        </div>
+                    </div>
+                    <div class="mcq-actions">
+                        <button class="btn btn-primary check-answer-btn">
+                            <i class="fas fa-check"></i> Check Answer
+                        </button>
+                        <button class="btn btn-secondary show-explanation-btn">
+                            <i class="fas fa-lightbulb"></i> Show Explanation
+                        </button>
+                    </div>
+                `;
+                
+                // Add event listeners
+                const checkAnswerBtn = card.querySelector('.check-answer-btn');
+                const showExplanationBtn = card.querySelector('.show-explanation-btn');
+                const optionElements = card.querySelectorAll('.mcq-option');
+                
+                let selectedOption = null;
+                
+                // If already completed, show the correct answer
+                if (isCompleted) {
+                    const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                    correctOptionElement.classList.add('correct');
+                    
+                    optionElements.forEach(option => {
+                        option.style.pointerEvents = 'none';
+                    });
+                    
+                    checkAnswerBtn.disabled = true;
+                    checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                } else {
+                    optionElements.forEach(option => {
+                        option.addEventListener('click', () => {
+                            optionElements.forEach(opt => opt.classList.remove('selected'));
+                            option.classList.add('selected');
+                            selectedOption = parseInt(option.getAttribute('data-option'));
+                        });
+                    });
+                    
+                    checkAnswerBtn.addEventListener('click', () => {
+                        if (selectedOption === null) {
+                            alert('Please select an answer first!');
+                            return;
+                        }
+                        
+                        optionElements.forEach(option => {
+                            option.classList.remove('correct', 'incorrect');
+                        });
+                        
+                        const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                        correctOptionElement.classList.add('correct');
+                        
+                        const selectedOptionElement = card.querySelector(`.mcq-option[data-option="${selectedOption}"]`);
+                        const isCorrect = selectedOptionElement.getAttribute('data-correct') === 'true';
+                        
+                        if (!isCorrect) {
+                            selectedOptionElement.classList.add('incorrect');
+                        } else {
+                            // Mark as completed
+                            progress[topic][mcq.id - 1] = true;
+                            saveProgress();
+                            updateProgress();
+                            
+                            const mcqId = card.querySelector('.mcq-id');
+                            mcqId.innerHTML = `MCQ #${mcq.id} <i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>`;
+                            
+                            optionElements.forEach(option => {
+                                option.style.pointerEvents = 'none';
+                            });
+                            
+                            checkAnswerBtn.disabled = true;
+                            checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                        }
+                    });
+                }
+                
+                showExplanationBtn.addEventListener('click', () => {
+                    const explanation = card.querySelector('.mcq-explanation');
+                    explanation.classList.toggle('show');
+                });
+                
+                return card;
+            }
+            
+            function getTopicName(topic) {
+                const names = {
+                    intro: 'Magnetism Introduction',
+                    magneticField: 'Magnetic Field',
+                    forceConductor: 'Force on Conductor',
+                    magneticFlux: 'Magnetic Flux',
+                    equations: 'Equations & Interrelations',
+                    sixty: '60 MCQs Set'
+                };
+                return names[topic] || topic;
+            }
+            
+            function updateProgress() {
+                // Calculate completion counts
+                const introCompleted = progress.intro.filter(Boolean).length;
+                const magneticFieldCompleted = progress.magneticField.filter(Boolean).length;
+                const forceConductorCompleted = progress.forceConductor.filter(Boolean).length;
+                const magneticFluxCompleted = progress.magneticFlux.filter(Boolean).length;
+                const equationsCompleted = progress.equations.filter(Boolean).length;
+                const sixtyCompleted = progress.sixty.filter(Boolean).length;
+                
+                const topicTotal = introCompleted + magneticFieldCompleted + forceConductorCompleted + magneticFluxCompleted + equationsCompleted;
+                const sixtyTotal = sixtyCompleted;
+                const totalCompleted = topicTotal + sixtyTotal;
+                
+                // Calculate accuracy
+                const totalAttempted = Object.values(progress).flat().filter(x => x !== false).length;
+                const accuracy = totalAttempted > 0 ? Math.round((totalCompleted / totalAttempted) * 100) : 0;
+                
+                // Update stats
+                document.getElementById('completed-mcqs').textContent = totalCompleted;
+                document.getElementById('accuracy').textContent = `${accuracy}%`;
+                
+                // Update topic progress
+                document.getElementById('intro-completed').textContent = introCompleted;
+                document.getElementById('intro-progress').style.width = `${(introCompleted / 8) * 100}%`;
+                
+                document.getElementById('magnetic-field-completed').textContent = magneticFieldCompleted;
+                document.getElementById('magnetic-field-progress').style.width = `${(magneticFieldCompleted / 10) * 100}%`;
+                
+                document.getElementById('force-conductor-completed').textContent = forceConductorCompleted;
+                document.getElementById('force-conductor-progress').style.width = `${(forceConductorCompleted / 10) * 100}%`;
+                
+                document.getElementById('magnetic-flux-completed').textContent = magneticFluxCompleted;
+                document.getElementById('magnetic-flux-progress').style.width = `${(magneticFluxCompleted / 8) * 100}%`;
+                
+                document.getElementById('equations-completed').textContent = equationsCompleted;
+                document.getElementById('equations-progress').style.width = `${(equationsCompleted / 9) * 100}%`;
+                
+                document.getElementById('sixty-completed').textContent = sixtyCompleted;
+                document.getElementById('sixty-progress').style.width = `${(sixtyCompleted / 60) * 100}%`;
+                
+                // Update overall progress
+                document.getElementById('overall-completed').textContent = totalCompleted;
+                document.getElementById('overall-progress').style.width = `${(totalCompleted / 105) * 100}%`;
+                
+                // Update summary
+                document.getElementById('intro-summary').textContent = introCompleted;
+                document.getElementById('magnetic-field-summary').textContent = magneticFieldCompleted;
+                document.getElementById('force-conductor-summary').textContent = forceConductorCompleted;
+                document.getElementById('magnetic-flux-summary').textContent = magneticFluxCompleted;
+                document.getElementById('equations-summary').textContent = equationsCompleted;
+                document.getElementById('sixty-summary').textContent = sixtyCompleted;
+                
+                document.getElementById('intro-summary-progress').style.width = `${(introCompleted / 8) * 100}%`;
+                document.getElementById('magnetic-field-summary-progress').style.width = `${(magneticFieldCompleted / 10) * 100}%`;
+                document.getElementById('force-conductor-summary-progress').style.width = `${(forceConductorCompleted / 10) * 100}%`;
+                document.getElementById('magnetic-flux-summary-progress').style.width = `${(magneticFluxCompleted / 8) * 100}%`;
+                document.getElementById('equations-summary-progress').style.width = `${(equationsCompleted / 9) * 100}%`;
+                document.getElementById('sixty-summary-progress').style.width = `${(sixtyCompleted / 60) * 100}%`;
+            }
+            
+            function resetProgress() {
+                if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
+                    progress = {
+                        intro: Array(8).fill(false),
+                        magneticField: Array(10).fill(false),
+                        forceConductor: Array(10).fill(false),
+                        magneticFlux: Array(8).fill(false),
+                        equations: Array(9).fill(false),
+                        sixty: Array(60).fill(false)
+                    };
+                    saveProgress();
+                    updateProgress();
+                    loadAllMCQs();
+                }
+            }
+            
+            function saveProgress() {
+                saveToLocalStorage('magnetismProgress', progress);
+            }
+            
+            function loadProgress() {
+                const savedProgress = getFromLocalStorage('magnetismProgress');
+                if (savedProgress) {
+                    // Ensure all arrays have correct length
+                    progress = {
+                        intro: savedProgress.intro || Array(8).fill(false),
+                        magneticField: savedProgress.magneticField || Array(10).fill(false),
+                        forceConductor: savedProgress.forceConductor || Array(10).fill(false),
+                        magneticFlux: savedProgress.magneticFlux || Array(8).fill(false),
+                        equations: savedProgress.equations || Array(9).fill(false),
+                        sixty: savedProgress.sixty || Array(60).fill(false)
+                    };
+                }
+            }
+            
+            function applyAnimations() {
+                const elements = document.querySelectorAll('.panel, .card, .nav-btn');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('fade-in');
+                    }, index * 50);
+                });
+            }
+            
+            function renderKaTeX() {
+                if (typeof renderMathInElement !== 'undefined') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '$', right: '$', display: false},
+                            {left: '\\(', right: '\\)', display: false},
+                            {left: '\\[', right: '\\]', display: true}
+                        ],
+                        throwOnError: false
+                    });
+                }
+            }
+            
+            function saveToLocalStorage(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                } catch (e) {
+                    console.error('Error saving to localStorage:', e);
+                }
+            }
+            
+            function getFromLocalStorage(key) {
+                try {
+                    const value = localStorage.getItem(key);
+                    return value ? JSON.parse(value) : null;
+                } catch (e) {
+                    console.error('Error reading from localStorage:', e);
+                    return null;
+                }
+            }
+            
+            // Load dark mode setting
+            const darkMode = getFromLocalStorage('darkMode');
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').classList.add('dark');
+            }
+        });
+    </script>
+</body>
+</html>
